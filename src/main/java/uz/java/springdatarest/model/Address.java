@@ -20,7 +20,7 @@ public class Address {
   private String street;
   private String zip;
 
-  @OneToOne()
+  @OneToOne
   @JoinColumn(name = "branch_id", referencedColumnName = "id")
   private Branch branch;
 }

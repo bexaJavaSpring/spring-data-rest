@@ -17,11 +17,10 @@ public class Section {
 
   private Integer number;
 
-  @ManyToOne
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "library_id", referencedColumnName = "id")
   private Library library;
 
-  @OneToOne
-  @JoinColumn(name = "timetable_id", referencedColumnName = "id")
+  @OneToOne(mappedBy = "section")
   private Timetable timetable;
 }

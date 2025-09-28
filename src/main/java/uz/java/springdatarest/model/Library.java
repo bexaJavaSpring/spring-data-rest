@@ -21,7 +21,7 @@ public class Library {
   @Column(length = 100)
   private String name;
 
-  @ManyToMany(mappedBy = "library")
+  @ManyToMany(mappedBy = "libraries")
   private List<User> users;
 
 

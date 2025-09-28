@@ -10,4 +10,8 @@ public class SpringDataRestApplication {
         SpringApplication.run(SpringDataRestApplication.class, args);
     }
 
+
+
+//    Behruz: User, Section, Address, TimeTable, Branch
+//    Ismoil aka: Book, Room, Library, Category, Role
 }

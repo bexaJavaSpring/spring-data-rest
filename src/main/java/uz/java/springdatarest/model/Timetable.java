@@ -19,6 +19,7 @@ public class Timetable {
 
   private Timestamp date;
 
-  @OneToOne(mappedBy = "timetable")
+  @OneToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "section_id", referencedColumnName = "id")
   private Section section;
 }
