@@ -1,16 +1,15 @@
 package uz.java.springdatarest.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "rooms")
-public class Room {
+public class Room extends Auditable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;

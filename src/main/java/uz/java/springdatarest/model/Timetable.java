@@ -1,23 +1,20 @@
 package uz.java.springdatarest.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.security.Timestamp;
+import java.time.LocalDateTime;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name="timetables")
-public class Timetable {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+public class Timetable extends Auditable {
 
-  private Timestamp date;
+  private LocalDateTime date;
 
   @OneToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "section_id", referencedColumnName = "id")

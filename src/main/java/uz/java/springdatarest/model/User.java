@@ -1,11 +1,10 @@
 package uz.java.springdatarest.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
@@ -14,13 +13,17 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-public class User {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+@SuperBuilder
+public class User extends Auditable {
 
   private String username;
+
+  @Column(name = "first_name")
   private String firstName;
+
+  @Column(name = "last_name")
+  private String lastName;
+
   private String email;
 
   @ManyToMany
@@ -29,7 +32,7 @@ public class User {
           joinColumns = @JoinColumn(name = "user_id"),
           inverseJoinColumns = @JoinColumn(name = "role_id")
   )
-  private List<Role> roles;
+  private List<Role> roles = new ArrayList<>();
 
   @ManyToMany
   @JoinTable(
@@ -37,6 +40,6 @@ public class User {
           joinColumns = @JoinColumn(name = "user_id"),
           inverseJoinColumns = @JoinColumn(name = "library_id")
   )
-  private List<Library> libraries;
+  private List<Library> libraryList = new ArrayList<>();
 
 }

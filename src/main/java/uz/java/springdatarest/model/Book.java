@@ -1,21 +1,18 @@
 package uz.java.springdatarest.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 @Table(name = "books")
-public class Book {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+public class Book extends Auditable {
 
   private String name;
+
   private String author;
 
   @ManyToOne(fetch = FetchType.LAZY)

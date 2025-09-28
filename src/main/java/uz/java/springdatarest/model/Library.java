@@ -1,28 +1,28 @@
 package uz.java.springdatarest.model;
 
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
+import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "libraries")
-public class Library {
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+public class Library extends Auditable {
 
-  @Column(length = 100)
-  private String name;
+    @Column(length = 100)
+    private String name;
 
-  @ManyToMany(mappedBy = "libraries")
-  private List<User> users;
+    @ManyToMany(mappedBy = "libraryList")
+    private List<User> users = new ArrayList<>();
 
 
 }
