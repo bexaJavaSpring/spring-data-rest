@@ -1,4 +1,4 @@
-//package uz.java.springdatarest.dto;
+//package uz.java.springdatarest.dto.filter;
 //
 //import lombok.AllArgsConstructor;
 //import lombok.Data;
@@ -7,7 +7,6 @@
 //@AllArgsConstructor
 //@NoArgsConstructor
 //@Data
-//public class RoleDto {
-//    private String name;
-//    private String code;
+//public class BookFilter extends BaseFilter{
+//
 //}

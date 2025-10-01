@@ -1,5 +1,5 @@
-package uz.java.springdatarest.dto;
-
-public class BaseFilter {
-
-}
+//package uz.java.springdatarest.dto;
+//
+//public class BaseFilter {
+//
+//}

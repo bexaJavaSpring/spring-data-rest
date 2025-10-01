@@ -2,6 +2,7 @@ package uz.java.springdatarest.model;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -9,8 +10,9 @@ import lombok.*;
 @Setter
 @Entity
 @Table(name = "books")
+@Builder
 public class Book extends Auditable {
-
+  @Column(unique = true)
   private String name;
 
   private String author;
