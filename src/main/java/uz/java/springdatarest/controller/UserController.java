@@ -2,9 +2,9 @@ package uz.java.springdatarest.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import uz.java.springdatarest.dto.UserFilter;
-import uz.java.springdatarest.dto.UserRequest;
-import uz.java.springdatarest.dto.UserResponse;
+import uz.java.springdatarest.dto.filter.UserFilter;
+import uz.java.springdatarest.dto.request.UserRequest;
+import uz.java.springdatarest.dto.reponse.UserResponse;
 import uz.java.springdatarest.service.UserService;
 
 import java.util.List;

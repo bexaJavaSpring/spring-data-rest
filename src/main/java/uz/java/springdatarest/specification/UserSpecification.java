@@ -6,7 +6,7 @@ import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 import lombok.AllArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
-import uz.java.springdatarest.dto.UserFilter;
+import uz.java.springdatarest.dto.filter.UserFilter;
 import uz.java.springdatarest.model.User;
 
 import java.util.ArrayList;

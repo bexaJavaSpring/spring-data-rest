@@ -28,6 +28,5 @@ public class Pagination {
         } else {
             return PageRequest.of(page, limit);
         }
-
     }
 }

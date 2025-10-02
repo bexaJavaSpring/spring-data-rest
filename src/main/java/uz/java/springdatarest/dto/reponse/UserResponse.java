@@ -1,8 +1,9 @@
-package uz.java.springdatarest.dto;
+package uz.java.springdatarest.dto.reponse;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import uz.java.springdatarest.dto.RoleDto;
 import uz.java.springdatarest.model.Library;
 import uz.java.springdatarest.model.Role;
 import uz.java.springdatarest.model.User;

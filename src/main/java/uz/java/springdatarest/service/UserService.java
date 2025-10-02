@@ -1,11 +1,9 @@
 package uz.java.springdatarest.service;
 
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import uz.java.springdatarest.dto.UserFilter;
-import uz.java.springdatarest.dto.UserRequest;
-import uz.java.springdatarest.dto.UserResponse;
+import uz.java.springdatarest.dto.filter.UserFilter;
+import uz.java.springdatarest.dto.request.UserRequest;
+import uz.java.springdatarest.dto.reponse.UserResponse;
 import uz.java.springdatarest.model.Role;
 import uz.java.springdatarest.model.User;
 import uz.java.springdatarest.repository.RoleRepository;

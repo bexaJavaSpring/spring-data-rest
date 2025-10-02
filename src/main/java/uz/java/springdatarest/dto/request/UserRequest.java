@@ -1,4 +1,4 @@
-package uz.java.springdatarest.dto;
+package uz.java.springdatarest.dto.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
