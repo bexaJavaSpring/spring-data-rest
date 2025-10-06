@@ -10,13 +10,8 @@ import lombok.*;
 @Entity
 @Table(name = "addresses")
 public class Address extends Auditable {
-
   private String state;
   private String city;
   private String street;
   private String zip;
-
-  @OneToOne
-  @JoinColumn(name = "branch_id", referencedColumnName = "id")
-  private Branch branch;
 }

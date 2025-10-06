@@ -17,7 +17,8 @@ public class Branch extends Auditable {
   @JoinColumn(name="library_id", referencedColumnName = "id", nullable=false)
   private Library library;
 
-  @OneToOne(mappedBy = "branch")
+  @OneToOne
+  @JoinColumn(name = "address_id", referencedColumnName = "id")
   private Address address;
 
 

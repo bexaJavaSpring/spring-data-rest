@@ -12,6 +12,6 @@ public class SpringDataRestApplication {
 
 
 
-//    Behruz: User, Section, Address, TimeTable, Branch
-//    Ismoil aka: Book, Room, Library, Category, Role
+//    Behruz: TimeTable
+//    Ismoil aka: Room, Library, Category, Role
 }
